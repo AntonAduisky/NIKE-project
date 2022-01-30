@@ -124,6 +124,7 @@
   }
 }
 .cargo {
+  width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -138,13 +139,15 @@
   padding: 80px 0 40px;
 }
 .cargo__card {
-  width: 1440px;
+  max-width: 1440px;
+  width: 99.8%;
   overflow-x: scroll;
   padding-bottom: 20px;
   position: relative;
 }
 .cargo__card-container {
-  width: 1440px;
+  max-width: 1440px;
+  height: 400px;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -160,7 +163,7 @@
   background-color: transparent;
   border: none;
   position: absolute;
-  right: 20px;
+  left: 20px;
   bottom: 20px;
   z-index: 1;
   cursor: pointer;
@@ -225,8 +228,8 @@
 }
 .cargo__card-item {
   position: relative;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .cargo__card-image {
   position: relative;
@@ -238,12 +241,15 @@
   font-size: 16px;
   line-height: 24px;
   max-width: 690px;
+  margin: 0;
+  padding: 0 20px 0 0;
 }
 .cargo__text {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: 80px 20px 80px 0;
+  margin: 0;
+  padding: 80px 0 80px;
 }
 .cargo__image {
   width: 100%;
@@ -251,6 +257,45 @@
      object-fit: cover;
 }
 
+@media screen and (max-width: 1200px) {
+  .cargo__paragraph {
+    max-width: 359px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cargo__card {
+    padding: 0 0 8px;
+  }
+  .cargo__title {
+    padding: 0 0 8px;
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .cargo__swipe-left {
+    top: 265px;
+  }
+  .cargo__swipe-right {
+    top: 265px;
+  }
+  .cargo__buy-button {
+    max-width: 286px;
+    padding-right: 280px;
+    background-image: url(../images/buy-button-big.svg);
+    background-repeat: no-repeat;
+  }
+  .cargo__paragraph {
+    padding: 0;
+    max-width: 280px;
+    text-align: start;
+    margin: 0 auto;
+  }
+  .cargo__text {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 40px 20px;
+    margin: 0 auto;
+  }
+}
 .footer {
   color: white;
 }
