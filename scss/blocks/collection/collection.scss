@@ -1,0 +1,130 @@
+.collection {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+
+    &__title {
+        @include title-settings;
+        margin: 0;
+        padding-top: $max;
+    }
+
+    &__info {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: $mid $min $max;
+    }
+
+    &__info-paragraph {
+        @include paragraph-settings;
+        max-width: 690px;
+        margin: 0;
+    }
+
+    &__info-image {
+        max-width: 460px;
+        object-fit: cover;
+    }
+
+    &__image {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__training {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: $max $min;
+    }
+
+    &__training-title {
+        max-width: 460px;
+        font-size: 32px;
+        line-height: 40px;
+        margin: 0;
+    }
+
+    &__training-paragraph {
+        @include paragraph-settings;
+        margin: 0;
+        max-width: 690px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .collection {
+        &__info-paragraph {
+            max-width: 359px;
+            padding-right: 10px;
+        }
+
+        &__info-image {
+            max-width: 359px;
+        }
+
+        &__training {
+            padding: $max $min;
+        }
+
+        &__training-title {
+            max-width: 359px;
+            font-size: 24px;
+            line-height: 32px;
+            padding-right: 10px;
+        }
+
+        &__training-paragraph {
+            max-width: 359px;
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .collection {
+        &__info {
+            padding: $mid $min $max;
+        }
+
+        &__title {
+            padding-top: $mid;
+            font-size: 32px;
+            line-height: 40px;
+        }
+
+        &__info {
+            flex-direction: column;
+            align-items: center;
+            padding: $min $min $mid;
+        }
+
+        &__info-paragraph {
+            @include paragraph-settings;
+            padding: 0 0 $min;
+            max-width: 280px;
+        }
+
+        &__info-image {
+            max-width: 280px;
+        }
+
+        &__training {
+            flex-direction: column;
+            align-items: center;
+            padding: $mid $min;
+        }
+
+        &__training-title {
+            font-size: 20px;
+            line-height: 28px;
+            padding: 0 0 $min;
+            max-width: 280px;
+        }
+    }
+}
