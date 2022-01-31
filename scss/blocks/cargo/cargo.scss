@@ -49,6 +49,10 @@
 
     &__buy-button:hover {
         opacity: 0.8;
+
+        &:active {
+            opacity: 1;
+        }
     }
 
     &__swipe-right {
@@ -70,6 +74,10 @@
 
     &__swipe-right:hover {
         opacity: 0.8;
+
+        &:active {
+            opacity: 1;
+        }
     }
 
     &__swipe-left {
@@ -91,6 +99,10 @@
 
     &__swipe-left:hover {
         opacity: 0.8;
+
+        &:active {
+            opacity: 1;
+        }
     }
 
     &__card::-webkit-scrollbar {

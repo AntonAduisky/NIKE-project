@@ -42,7 +42,18 @@
         width: 171px;
         height: 40px;
         font-weight: 500;
+        cursor: pointer;
         @include paragraph-settings;
+        transition: opacity 0.2s linear;
+        -webkit-transition: opacity 0.2s linear;
+
+        &:hover {
+            opacity: 0.6;
+        }
+
+        &:active {
+            opacity: 1;
+        }
     }
 
     &__sign {

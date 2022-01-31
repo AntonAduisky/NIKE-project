@@ -4,7 +4,7 @@
     box-sizing: border-box;
     background-image: url("../images/header.png");
     width: 100%;
-    min-height: 810px;
+    height: 810px;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -46,7 +46,7 @@
 
 @media screen and (max-width: 750px) {
     .header {
-        min-height: 360px;
+        height: 360px;
 
         &__title {
             max-width: 280px;

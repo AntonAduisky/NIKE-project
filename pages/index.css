@@ -7,7 +7,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  min-width: 305px;
+  min-width: 320px;
   max-width: 1440px;
   width: 100%;
   height: 100%;
@@ -24,7 +24,7 @@
   box-sizing: border-box;
   background-image: url("../images/header.png");
   width: 100%;
-  min-height: 810px;
+  height: 810px;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -66,7 +66,7 @@
 
 @media screen and (max-width: 750px) {
   .header {
-    min-height: 360px;
+    height: 360px;
   }
   .header__title {
     max-width: 280px;
@@ -247,6 +247,9 @@
 .cargo__buy-button:hover {
   opacity: 0.8;
 }
+.cargo__buy-button:hover:active {
+  opacity: 1;
+}
 .cargo__swipe-right {
   height: 40px;
   width: 40px;
@@ -266,6 +269,9 @@
 .cargo__swipe-right:hover {
   opacity: 0.8;
 }
+.cargo__swipe-right:hover:active {
+  opacity: 1;
+}
 .cargo__swipe-left {
   height: 40px;
   width: 40px;
@@ -284,6 +290,9 @@
 }
 .cargo__swipe-left:hover {
   opacity: 0.8;
+}
+.cargo__swipe-left:hover:active {
+  opacity: 1;
 }
 .cargo__card::-webkit-scrollbar {
   height: 4px;
@@ -412,8 +421,17 @@
   width: 171px;
   height: 40px;
   font-weight: 500;
+  cursor: pointer;
   font-size: 16px;
   line-height: 24px;
+  transition: opacity 0.2s linear;
+  -webkit-transition: opacity 0.2s linear;
+}
+.footer__button:hover {
+  opacity: 0.6;
+}
+.footer__button:active {
+  opacity: 1;
 }
 .footer__sign {
   margin: 40px 0 0;
@@ -452,7 +470,7 @@
 }
 .popup {
   visibility: hidden;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -466,15 +484,17 @@
 .popup__close-button {
   margin: 40px 0 0 40px;
   padding: 0;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   background-image: url("../images/close-button.svg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   border: none;
   width: 48px;
   min-height: 48px;
   cursor: pointer;
   transition: opacity 0.2s linear;
+  -webkit-transition: opacity 0.2s linear;
   align-self: flex-start;
 }
 .popup__close-button:hover {
@@ -485,7 +505,6 @@
   margin: 0;
   padding: 0;
   align-self: center;
-  border: 1px solid red;
 }
 .popup__list {
   margin: 149px 0 0;
@@ -494,7 +513,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid red;
 }
 .popup__list-item {
   margin: 0;
@@ -503,7 +521,6 @@
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  border: 1px solid red;
 }
 .popup__link {
   margin: 40px 0;
@@ -514,14 +531,18 @@
   align-self: center;
   font-weight: 500;
   font-size: 32px;
-  line-height: 125%;
+  line-height: 40px;
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
   transition: opacity 0.2s linear;
+  -webkit-transition: opacity 0.2s linear;
 }
 .popup__link:hover {
   opacity: 0.6;
+}
+.popup__link:active {
+  opacity: 1;
 }
 
 .popup_opened {
@@ -530,32 +551,9 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .popup {
-    min-height: 360px;
-  }
-  .popup__close-button {
-    margin: 20px 0 0 20px;
-    background-image: url("../images/close-button-mini.svg");
-    width: 24px;
-    min-height: 24px;
-  }
-  .popup__list {
-    margin: 35px 0;
-  }
-  .popup__list-item {
-    font-size: 24px;
-    line-height: 133%;
-  }
   .popup__link {
     font-size: 24px;
-    line-height: 133%;
-  }
-}
-@media screen and (max-width: 1200px) and (max-width: 650px) {
-  .popup {
-    margin: 20px 0;
-    font-size: 20px;
-    line-height: 140%;
+    line-height: 32px;
   }
 }
 @media screen and (max-width: 750px) {
@@ -571,13 +569,10 @@
   .popup__list {
     margin: 35px 0;
   }
-  .popup__list-item {
-    font-size: 24px;
-    line-height: 133%;
-  }
   .popup__link {
-    font-size: 24px;
-    line-height: 133%;
+    margin: 20px 0;
+    font-size: 20px;
+    line-height: 28px;
   }
 }
 .page {
@@ -587,7 +582,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  min-width: 305px;
+  min-width: 320px;
   max-width: 1440px;
   width: 100%;
   height: 100%;
