@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -12,9 +12,11 @@
 
 <body class="page">
     <header class="header">
+        <button class="header__menu-button" type="button"></button>
+        <h1 class="header__title">NIKE X MMW TRAINING 4.0</h1>
     </header>
     <main class="main">
-        <section class="collection">
+        <section id="collection" class="collection">
             <h2 class="collection__title">О КОЛЛЕКЦИИ</h2>
             <div class="collection__info">
                 <p class="collection__info-paragraph">Разум или тело, движение или покой, спорт или отдых — дисциплина
@@ -34,7 +36,7 @@
                     превращает силовые тренировки в эксперимент по испытанию силы духа.</p>
             </div>
         </section>
-        <section class="cargo">
+        <section id="cargo" class="cargo">
             <h2 class="cargo__title">ТОВАРЫ</h2>
             <button class="cargo__swipe-left"></button>
             <div class="cargo__card">
@@ -91,7 +93,33 @@
             <img src="./images/collection_2.png" alt="Коллаж фотографий" class="cargo__image">
         </section>
     </main>
-    <footer class="footer"></footer>
+    <footer id="footer" class="footer">
+        <h2 class="footer__title">Подписаться</h2>
+        <p class="footer__subtitle">Укажите свой email чтобы быть в курсе даты релиза, и других новостей о коллекции</p>
+        <form class="footer__form">
+            <input type="email" class="footer__email" placeholder="Введите email">
+            <button type="submit" class="footer__button">ПОДПИСАТЬСЯ</button>
+        </form>
+        <p class="footer__sign">&copy; Nike, Inc., 2021. Какие-то права защищены.</p>
+    </footer>
+
+    <div class="popup popup_opened">
+        <button class="popup__close-button"></button>
+        <nav class="popup__navigation">
+            <ul class="popup__list">
+                <li class="popup__list-item">
+                    <a href="#collection" class="popup__link">О коллекции</a>
+                </li>
+                <li class="popup__list-item">
+                    <a href="#cargo" class="popup__link">Товары</a>
+                </li>
+                <li class="popup__list-item">
+                    <a href="#footer" class="popup__link">Подписаться</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
 </body>
 
 </html>

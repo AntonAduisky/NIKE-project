@@ -1,0 +1,148 @@
+.popup {
+  visibility: hidden;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 810px;
+  opacity: 0;
+  background-color: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+
+  &__close-button {
+    margin: 40px 0 0 40px;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("../images/close-button.svg");
+    background-size: cover;
+    background-position: center;
+    border: none;
+    width: 48px;
+    min-height: 48px;
+    cursor: pointer;
+    transition: opacity 0.2s linear;
+    align-self: flex-start;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__navigation {
+    display: block;
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    border: 1px solid red;
+  }
+
+  &__list {
+    margin: 149px 0 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid red;
+  }
+
+  &__list-item {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    border: 1px solid red;
+  }
+
+  &__link {
+    margin: $mid 0;
+    padding: 0;
+    width: 100%;
+    text-decoration: none;
+    box-sizing: border-box;
+    align-self: center;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 125%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    transition: opacity 0.2s linear;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+.popup_opened {
+  visibility: visible;
+  opacity: 1;
+}
+
+//popup tablet
+
+@media screen and (max-width: 1200px) {
+  .popup {
+    min-height: 360px;
+
+    &__close-button {
+      margin: 20px 0 0 20px;
+      background-image: url("../images/close-button-mini.svg");
+      width: 24px;
+      min-height: 24px;
+    }
+
+    &__list {
+      margin: 35px 0;
+    }
+
+    &__list-item {
+      font-size: 24px;
+      line-height: 133%;
+    }
+
+    &__link {
+      font-size: 24px;
+      line-height: 133%;
+    }
+    @media screen and (max-width: 650px) {
+      margin: 20px 0;
+      font-size: 20px;
+      line-height: 140%;
+    }
+  }
+}
+
+//popup mobile
+
+@media screen and (max-width: 750px) {
+  .popup {
+    min-height: 360px;
+
+    &__close-button {
+      margin: 20px 0 0 20px;
+      background-image: url("../images/close-button-mini.svg");
+      width: 24px;
+      min-height: 24px;
+    }
+
+    &__list {
+      margin: 35px 0;
+    }
+
+    &__list-item {
+      font-size: 24px;
+      line-height: 133%;
+    }
+
+    &__link {
+      font-size: 24px;
+      line-height: 133%;
+    }
+  }
+}
