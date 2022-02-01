@@ -58,6 +58,7 @@
     }
 }
 
+//collection tablet
 @media screen and (max-width: 1200px) {
     .collection {
         &__info-paragraph {
@@ -86,6 +87,7 @@
     }
 }
 
+//collection mobile
 @media screen and (max-width: 750px) {
     .collection {
         &__info {

@@ -11,7 +11,7 @@
     flex-direction: column;
 
     &__menu-button {
-        margin: 40px 20px 0;
+        margin: $mid $min 0;
         padding: 0;
         background-color: rgba(0, 0, 0, 0);
         background-image: url("../images/menu-button.svg");
@@ -30,7 +30,7 @@
     }
 
     &__title {
-        margin: 120px 20px;
+        margin: 120px $min;
         padding: 0;
         display: block;
         max-width: 460px;
@@ -58,7 +58,7 @@
             background-image: url("../images/menu-button-mini.svg");
             max-width: 24px;
             height: 24px;
-            margin-top: 20px;
+            margin-top: $min;
         }
 
         &__button {

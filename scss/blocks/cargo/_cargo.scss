@@ -9,7 +9,7 @@
     &__title {
         @include title-settings;
         margin: 0;
-        padding: $max 0 $mid;
+        padding: 0 0 $min 0;
     }
 
     &__card {
@@ -64,7 +64,7 @@
         position: absolute;
         background-repeat: no-repeat;
         padding: 20px;
-        top: 400px;
+        top: 183px;
         right: 20px;
         z-index: 1;
         cursor: pointer;
@@ -89,7 +89,7 @@
         position: absolute;
         background-repeat: no-repeat;
         padding: 20px;
-        top: 400px;
+        top: 183px;
         left: 20px;
         z-index: 1;
         cursor: pointer;

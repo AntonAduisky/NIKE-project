@@ -3,13 +3,13 @@
   position: absolute;
   top: 0;
   left: 0;
+  min-width: 320px;
   width: 100%;
   min-height: 810px;
   opacity: 0;
   background-color: #0a0a0a;
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
 
   &__close-button {
     margin: 40px 0 0 40px;

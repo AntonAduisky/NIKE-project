@@ -210,7 +210,7 @@
   font-size: 64px;
   line-height: 80px;
   margin: 0;
-  padding: 80px 0 40px;
+  padding: 0 0 20px 0;
 }
 .cargo__card {
   max-width: 1440px;
@@ -259,7 +259,7 @@
   position: absolute;
   background-repeat: no-repeat;
   padding: 20px;
-  top: 400px;
+  top: 183px;
   right: 20px;
   z-index: 1;
   cursor: pointer;
@@ -281,7 +281,7 @@
   position: absolute;
   background-repeat: no-repeat;
   padding: 20px;
-  top: 400px;
+  top: 183px;
   left: 20px;
   z-index: 1;
   cursor: pointer;
@@ -473,13 +473,13 @@
   position: absolute;
   top: 0;
   left: 0;
+  min-width: 320px;
   width: 100%;
   min-height: 810px;
   opacity: 0;
   background-color: #0a0a0a;
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
 }
 .popup__close-button {
   margin: 40px 0 0 40px;
