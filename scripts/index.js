@@ -24,6 +24,9 @@ closeButton.addEventListener('click', () => {
 //     })
 // });
 
+
+
+
 //cargo-slider
 const cargo = document.querySelector('.cargo');
 let i = 0;
