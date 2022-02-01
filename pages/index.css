@@ -16,6 +16,7 @@
   padding: 0;
   box-sizing: border-box;
   color: white;
+  position: relative;
 }
 
 .header {
@@ -480,6 +481,7 @@
   background-color: #0a0a0a;
   display: flex;
   flex-direction: column;
+  max-width: 1440px;
 }
 .popup__close-button {
   margin: 40px 0 0 40px;
@@ -591,4 +593,5 @@
   padding: 0;
   box-sizing: border-box;
   color: white;
+  position: relative;
 }/*# sourceMappingURL=index.css.map */
