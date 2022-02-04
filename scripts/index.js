@@ -1,3 +1,32 @@
+//модальное окно
+const popup = document.querySelector('.popup');
+const popupOpened = document.querySelector('.popup_opened');
+const popupButton = document.querySelector('.header__menu-button');
+const closeButton = document.querySelector('.popup__close-button');
+const linkButtons = document.querySelectorAll('.popup__list-item');
+
+//открытие попапа по нажатию на кнопку бургер в header
+popupButton.addEventListener('click', (e) => { // вешаем обработчик событий на клик
+    e.preventDefault(); // Предотвращаем дефолтное поведение браузера
+    popup.classList.add('popup_opened'); // Добавляем класс открытия попапа
+});
+
+//закрытие попапа по нажатию на крестик
+closeButton.addEventListener('click', () => {
+    popup.classList.remove('popup_opened'); // удаляем класс открытия попапа
+});
+
+//закрытие попапа по нажатию на одну из кнопок в меню
+// linkButtons.forEach((button) => {
+//     button.addEventListener('click', (e) => {
+//         e.preventDefault();
+//         popup.classList.remove('popup_opened');
+//     })
+// });
+
+
+
+
 //cargo-slider
 const cargo = document.querySelector('.cargo');
 let i = 0;
