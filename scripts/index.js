@@ -3,7 +3,7 @@ const popup = document.querySelector('.popup');
 const popupOpened = document.querySelector('.popup_opened');
 const popupButton = document.querySelector('.header__menu-button');
 const closeButton = document.querySelector('.popup__close-button');
-const linkButtons = document.querySelectorAll('.popup__list-item');
+const linkButtons = document.querySelector('.popup__list-item');
 
 //открытие попапа по нажатию на кнопку бургер в header
 popupButton.addEventListener('click', (e) => { // вешаем обработчик событий на клик
@@ -17,12 +17,15 @@ closeButton.addEventListener('click', () => {
 });
 
 //закрытие попапа по нажатию на одну из кнопок в меню
-// linkButtons.forEach((button) => {
-//     button.addEventListener('click', (e) => {
+// function q() {
+//     linkButtons.addEventListener('click', (e) => {
 //         e.preventDefault();
 //         popup.classList.remove('popup_opened');
 //     })
-// });
+// };
+
+
+// setTimeout(q, 1000);
 
 
 
